@@ -1,0 +1,62 @@
+Format: 1.8
+Date: Mon, 17 May 2010 16:05:34 -0700
+Source: thrift
+Binary: thrift-compiler python-thrift python-thrift-dbg libthrift-ruby libthrift-perl libthrift0 libthrift-dev php5-thrift libthrift-java
+Architecture: source amd64 all
+Version: 0.2.0-r917130-1
+Distribution: unstable
+Urgency: low
+Maintainer: Esteve Fernandez <esteve@fluidinfo.com>
+Changed-By: Ian Eure <ian@simplegeo.com>
+Description: 
+ libthrift-dev - Thrift C++ library (development headers)
+ libthrift-java - Java bindings for Thrift
+ libthrift-perl - Perl bindings for Thrift
+ libthrift-ruby - Ruby bindings for Thrift
+ libthrift0 - Thrift C++ library
+ php5-thrift - PHP bindings for Thrift
+ python-thrift - Python bindings for Thrift
+ python-thrift-dbg - Python bindings for Thrift (debug version)
+ thrift-compiler - Compiler for Thrift definition files
+Changes: 
+ thrift (0.2.0-r917130-1) unstable; urgency=low
+ .
+   * New upstream (snapshot) version.
+   * Update standards-version.
+   * Fix some lintian issues.
+Checksums-Sha1: 
+ d302b912869bb85f77ddf9907ade2fc1e94f696e 940 thrift_0.2.0-r917130-1.dsc
+ c592259a30fba75923d29aba5c39d8de1931363b 3004955 thrift_0.2.0-r917130-1.tar.gz
+ 8984418d779f8af98a9373201ee95dc61461a2e8 567780 thrift-compiler_0.2.0-r917130-1_amd64.deb
+ a0c8335e830e0f71b7d26a1915fc40d9c6dfa4fa 24522 python-thrift_0.2.0-r917130-1_amd64.deb
+ 424b571aa056806902bb83349340b6ac2e05db5f 38084 python-thrift-dbg_0.2.0-r917130-1_amd64.deb
+ ce28fc116ac72f6ed6e5ef38a6438f4df48a903c 45106 libthrift-ruby_0.2.0-r917130-1_amd64.deb
+ 4796bc3a37a8fbea2ee575c321367ad59f45abc5 217646 libthrift0_0.2.0-r917130-1_amd64.deb
+ a92bb795071f1ea3e7c78fb97ccd62f390c557b2 389508 libthrift-dev_0.2.0-r917130-1_amd64.deb
+ 9897340e26db07d9b45898f4c5b2529c8ff741d5 19950 php5-thrift_0.2.0-r917130-1_amd64.deb
+ 6640fca47f1e1a2e9fe92d80dcd7e36627d7b391 172536 libthrift-java_0.2.0-r917130-1_amd64.deb
+ aee47a724fc3ff44f57ffdf18c9d4a0c25e03030 12228 libthrift-perl_0.2.0-r917130-1_all.deb
+Checksums-Sha256: 
+ 738768ca1535a2a2de88b317cc9e387fc7d99713e40d2615bed88eb5f9891be7 940 thrift_0.2.0-r917130-1.dsc
+ 690903aeac189e663c9f19e4f93ac1882c65f64c2b050453406aa6c6a8c58e92 3004955 thrift_0.2.0-r917130-1.tar.gz
+ 3df445b179683d6f2db98019422fc7d9a6fe06ac374d166e66ba8cd92999a9ae 567780 thrift-compiler_0.2.0-r917130-1_amd64.deb
+ ebd1fb260521249f5df72ff2fb7bea02f47c93e1126a385be69c3641cfaebfd2 24522 python-thrift_0.2.0-r917130-1_amd64.deb
+ 80a11706ed7ba91922f49759bd6bba9ae06754dd7383a9f5b0ba2c8e0135b650 38084 python-thrift-dbg_0.2.0-r917130-1_amd64.deb
+ 64138289420e689dc661d2e16af2e76edac0c6269db8535b0c7d41a447067f41 45106 libthrift-ruby_0.2.0-r917130-1_amd64.deb
+ 7a58d81d3304612f0cb346a15a3ed879fb882470220fc3de3afefb5df681053d 217646 libthrift0_0.2.0-r917130-1_amd64.deb
+ 746375036de8731c58a18e5d394101f325adeedc819981e8d728848afc428198 389508 libthrift-dev_0.2.0-r917130-1_amd64.deb
+ 6a5bb84d10bf5c2f103c3e4325184d844703e577e6798d72d8aa3e7e6eb7961f 19950 php5-thrift_0.2.0-r917130-1_amd64.deb
+ c0f0582f6c308b17fd3b07232658950f9d3eab13152d1b2c7fd98803ac4b46c4 172536 libthrift-java_0.2.0-r917130-1_amd64.deb
+ a25d04a518d2f0df514882e360bb9811da8239cd3c64fbe62bc47378236691d3 12228 libthrift-perl_0.2.0-r917130-1_all.deb
+Files: 
+ c968127d6e063166b485ca12fdf7192a 940 devel extra thrift_0.2.0-r917130-1.dsc
+ 457a37f39bcbfaa7f49a538f61ccbcd1 3004955 devel extra thrift_0.2.0-r917130-1.tar.gz
+ ca9e22c6195da7fb97f757cd2a5025c6 567780 devel extra thrift-compiler_0.2.0-r917130-1_amd64.deb
+ 2e05a881a10bfb3124ab48963544c700 24522 python extra python-thrift_0.2.0-r917130-1_amd64.deb
+ 0958c3a71e24eab22f42003fd39e59ae 38084 debug extra python-thrift-dbg_0.2.0-r917130-1_amd64.deb
+ 88db211197449c87b007950b913dd487 45106 ruby extra libthrift-ruby_0.2.0-r917130-1_amd64.deb
+ b8a625da759284c2105eebc2d332902b 217646 devel extra libthrift0_0.2.0-r917130-1_amd64.deb
+ 6da8884eea72af53c8250729bd316cc2 389508 libdevel extra libthrift-dev_0.2.0-r917130-1_amd64.deb
+ fa088a39d55c56c88e7337e97cc22bc3 19950 php extra php5-thrift_0.2.0-r917130-1_amd64.deb
+ b046c462ba70519d96826f168dc2fbcc 172536 java extra libthrift-java_0.2.0-r917130-1_amd64.deb
+ 16a7925e5694b4672810a5893272a4bb 12228 perl extra libthrift-perl_0.2.0-r917130-1_all.deb
