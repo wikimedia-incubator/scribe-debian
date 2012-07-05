@@ -1,4 +1,3 @@
-
 If you are looking for Debian/Ubuntu packaging for scribe, you have come to
 the right place!
 
@@ -22,7 +21,7 @@ These repositories have been forked from
 they build more seemless.  The wmf-analytics forks build the java libraries for
 thrift, fb303 and scribe.  
 
-NOTE: A [thrift-debian](https://github.com/wmf-analytics/thrift-debian)
+*NOTE*: A [thrift-debian](https://github.com/wmf-analytics/thrift-debian)
 repository also exists to build thrift packages. That repository is not used
-this packaging of scribe, since getting building scribe against a newer
+for this packaging of scribe, since getting building scribe against a newer
 version of thrift proved to be pretty much impossible.
