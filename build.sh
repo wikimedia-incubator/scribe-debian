@@ -17,10 +17,13 @@ fi
 thrift_repository_url="git://github.com/wmf-analytics/thrift.git"
 fb303_repository_url="git://github.com/wmf-analytics/thrift-fb303.git"
 scribe_repository_url="git://github.com/wmf-analytics/scribe.git"
+scribe_log4j_repository_url="git://github.com/wmf-analytics/log4j-scribe-appender.git"
 
 thrift_directory="${repo_root}/thrift"
 fb303_directory="${repo_root}/thrift-fb303"
 scribe_directory="${repo_root}/scribe"
+scribe_log4j_directory="${repo_root}/log4j-scribe-appender"
+
 
 function clone_repository
 {
@@ -150,11 +153,45 @@ function build_scribe
   echo -e "\nMoving packages into deb/ directory.\n"
   mkdir -p deb
   mv -v \
-    ${repo_root}/libscribe-java*4.deb  \
+    ${repo_root}/libscribe-java*.deb  \
     ${repo_root}/scribe*.deb           \
     ${repo_root}/scribe*.changes       \
     ${repo_root}/scribe*.dsc           \
     ${repo_root}/scribe*.tar.gz        \
+    ${repo_root}/deb/
+
+  echo -e "\nDone building scribe packages.\n"
+}
+
+function build_scribe_log4j
+{
+  ## Build scribe packages
+  # We need to install libthrift0, libthrift-dev, thrift-compiler, 
+  # and python-thrift in order to build scribe-log4j.jar.  Go ahead and install
+  # these from the newly created debs.
+  echo -e "\nInstalling newly created debs for libthrift0, libthrift-dev, thrift-compiler, libthrift-java, thrift-fb303, libfb303-java, scribe and libscribe-java in order to create scribe-log4j-java package.\n"
+  # uninstall these packages first
+  dpkg -r libthrift0 thrift-compiler libthrift-dev thrift-fb303 libthrift-java libfb303-java scribe libscribe-java libscribe-log4j-java
+  dpkg -i ${repo_root}/deb/{libthrift0,thrift-compiler,libthrift-dev,thrift-fb303,libthrift-java,libfb303-java,scribe,libscribe-java}*.deb || (echo "Could not install dependencies for scribe-log4j-java packages." && exit 1)
+  
+  echo -e "\nBuilding scribe-log4j package...\n"
+
+  if [ ! -d $scribe_log4j_directory/.git ]; then
+    echo "Cloning scribe repository from $scribe_log4j_repository_url"
+    clone_repository $scribe_log4j_repository_url $scribe_log4j_directory
+  fi
+
+  build_package $scribe_log4j_directory
+	# This should build:
+	# - libscribe-log4j-java
+
+  echo -e "\nMoving packages into deb/ directory.\n"
+  mkdir -p deb
+  mv -v \
+    ${repo_root}/libscribe-log4j-java*.deb           \
+    ${repo_root}/libscribe-log4j-java*.changes       \
+    ${repo_root}/libscribe-log4j-java*.dsc           \
+    ${repo_root}/libscribe-log4j-java*.tar.gz        \
     ${repo_root}/deb/
 
   echo -e "\nDone building scribe packages.\n"
@@ -173,13 +210,17 @@ case $package in
     echo "Building scribe packages"
     build_scribe
     ;;
+  log4j )
+    echo "Building scribe-log4 package"
+    build_scribe_log4j
+    ;;
   all )
     echo "Building thrift and fb303 packages"
     build_thrift
     build_fb303
     build_scribe
     ;;
-  * ) echo -e "\n  Usage: $0 thrift|fb303|scribe|all     (Default: all)" && exit 1
+  * ) echo -e "\n  Usage: $0 thrift|fb303|scribe|log4j|all     (Default: all)" && exit 1
     ;;
 esac
 
