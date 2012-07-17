@@ -135,7 +135,7 @@ function build_scribe
   # these from the newly created debs.
   echo -e "\nInstalling newly created debs for libthrift0, libthrift-dev, thrift-compiler, libthrift-java, thrift-fb303 and libfb303-java in order to create scribe packages.\n"
   # uninstall these packages first
-  dpkg -r libthrift0 thrift-compiler libthrift-dev thrift-fb303 libthrift-java libfb303-java
+  dpkg -r libthrift0 thrift-compiler libthrift-dev thrift-fb303 libthrift-java libfb303-java scribe libscribe-java
   dpkg -i ${repo_root}/deb/{libthrift0,thrift-compiler,libthrift-dev,thrift-fb303,libthrift-java,libfb303-java}*.deb || (echo "Could not install dependencies for scribe packages." && exit 1)
   
   echo -e "\nBuilding scribe packages...\n"
