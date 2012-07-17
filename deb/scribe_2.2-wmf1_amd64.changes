@@ -1,0 +1,34 @@
+Format: 1.8
+Date: Tue, 17 Jul 2012 16:41:40 -0500
+Source: scribe
+Binary: scribe libscribe-java
+Architecture: source amd64
+Version: 2.2-wmf1
+Distribution: lucid
+Urgency: low
+Maintainer: SimpleGeo Nerds <nerds@simplegeo.com>
+Changed-By: Andrew Otto <otto@wikimedia.org>
+Description: 
+ libscribe-java - Java Thrift bindings for Facebook's Scribe logging service.
+ scribe     - Facebook's distributed, streaming log server
+Changes: 
+ scribe (2.2-wmf1) lucid; urgency=low
+ .
+   [ Andrew Otto ]
+ .
+   * Creating separate deb package for libscribe-java.
+Checksums-Sha1: 
+ e04a8a229ef48fcfc731e5d753ca87dc2bb4bc0c 756 scribe_2.2-wmf1.dsc
+ 9919264a0956c427f5b0d17ae77fd16be69e28dd 212515 scribe_2.2-wmf1.tar.gz
+ 5751faf71ba1778f527230c41aea5958166ae670 253850 scribe_2.2-wmf1_amd64.deb
+ 821f2b2a599bcf53786c1c5f0ff2a7a6a9573383 31880 libscribe-java_2.2-wmf1_amd64.deb
+Checksums-Sha256: 
+ 80649b3ffc1992c46edee820a8afe45265780bc8a173c15b65ca166e4f591383 756 scribe_2.2-wmf1.dsc
+ 1574f206fb654275a89be52a8ecfb3a5a3256a4f0a382ecdd1e67901c6993e78 212515 scribe_2.2-wmf1.tar.gz
+ c4d7f5b689284afa4582e48ae03bb7b4624ed598dde9c2f48467a2e8d9f0e8eb 253850 scribe_2.2-wmf1_amd64.deb
+ ef33ac758edf6d9545b3152a5cef6013ecd3a2c959cd926ea4ee3e6efd8d18f4 31880 libscribe-java_2.2-wmf1_amd64.deb
+Files: 
+ 7080b5942b1ab8933379d2005eea2332 756 net extra scribe_2.2-wmf1.dsc
+ 5e5313761c4a917473e3f78201b7c065 212515 net extra scribe_2.2-wmf1.tar.gz
+ 71fb6b781dcf45f14253a622423c2673 253850 net extra scribe_2.2-wmf1_amd64.deb
+ a909b4e9624ef6efefc2913fc057bd41 31880 java extra libscribe-java_2.2-wmf1_amd64.deb
