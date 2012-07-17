@@ -1,0 +1,29 @@
+Format: 1.8
+Date: Fri, 6 Jul 2012 10:45:00 -0500
+Source: libscribe-log4j-java
+Binary: libscribe-log4j-java
+Architecture: source all
+Version: 0.1
+Distribution: unstable
+Urgency: low
+Maintainer: Andrew Otto <otto@wikimedia.org>
+Changed-By: Andrew Otto <otto@wikimedia.org>
+Description: 
+ libscribe-log4j-java - A Scribe appender for Log4j.
+Changes: 
+ libscribe-log4j-java (0.1) unstable; urgency=low
+ .
+   * Added debian/ packaging
+   * Using tab as whitespace separator in prefixed strings in log message.
+Checksums-Sha1: 
+ d84043b1217bb83c88de03588c923ce42a30a30f 737 libscribe-log4j-java_0.1.dsc
+ 8ed14c6c23102ac4c42b141b0c2e951bfd792cc5 1391151 libscribe-log4j-java_0.1.tar.gz
+ c0afb5302f5741780484881d6ca352a1e4eb2af6 8240 libscribe-log4j-java_0.1_all.deb
+Checksums-Sha256: 
+ eaee174a9b9e6ed08b6e77e9a35472a8b0375a29b0f0bb6d8b99aa01e202d458 737 libscribe-log4j-java_0.1.dsc
+ a8c8a2512bec6dbd0a792e33459fe983a397da6db1260f7fae9d959727e60a9e 1391151 libscribe-log4j-java_0.1.tar.gz
+ a6cd81dc7113f2c63323ad3bbfb62a85cbb34e86575e55feb02fcfa8b749e81f 8240 libscribe-log4j-java_0.1_all.deb
+Files: 
+ 31758eab22b9b097123de870a6770834 737 utils extra libscribe-log4j-java_0.1.dsc
+ 715bd940b7e3cab812ea09f6a63bd434 1391151 utils extra libscribe-log4j-java_0.1.tar.gz
+ fa4e64fc047820b10571577550e9abb9 8240 utils extra libscribe-log4j-java_0.1_all.deb
